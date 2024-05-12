@@ -6,15 +6,34 @@ const url_Protected = `${apiUrl}/protected`;
 
 //****HÄNDELSELYSSNARE****
 document.addEventListener("DOMContentLoaded", function() {
+console.log("Kod körs efter DOMContent");
+
+
+const registerForm = document.getElementById("registerForm");
+const loginForm = document.getElementById("loginForm");
+
+// Kontrollera om formulär finns
+if (!registerForm || !loginForm) {
+    console.error("Kan inte hitta formulär.");
+    return;
+}
 
 //Händelselyssnare för register-formulär
-document.getElementById("registerForm").addEventListener("submit", async function(event) {
+registerForm.addEventListener("submit", async function(event) {
+    console.log("submit-händelsen har inträffat på registerForm");
+
 
     event.preventDefault();
     
     //Hämtar in input från ID:fält
     const username = document.getElementById("registerUsername").value;
     const password = document.getElementById("registerPassword").value;
+
+ // Kontrollera inputfälten
+ if (!username || !password) {
+    console.error("Användarnamn och lösenord krävs.");
+    return;
+}
 
 // Array för error
 let errors = [];
@@ -27,8 +46,12 @@ if (!password) {
     errors.push("Lösenord krävs");
 }
 
+console.log("Errors efter kontroll:", errors);
+
+
 // Om error avbryt formulär
 if (errors.length > 0) {
+    console.log(errors);            //Loggar error för att se om utskrift sker
     displayErrors(errors);
     return;
 }
@@ -39,16 +62,25 @@ if (errors.length > 0) {
     document.getElementById("registerUsername").value = "";
     document.getElementById("registerPassword").value = "";
 
+    console.log("Kod efter registrering har körts");
+
 });
 
 //Händelselyssnare för login-forumlär
-document.getElementById("loginForm").addEventListener("submit", async function(event) {
+loginForm.addEventListener("submit", async function(event) {
 
     event.preventDefault();
     
     const username = document.getElementById("loginUsername").value;
     const password = document.getElementById("loginPassword").value;
     
+
+ // Kontrollera inputfälten
+ if (!username || !password) {
+    console.error("Användarnamn och lösenord krävs.");
+    return;
+}
+
  // Array för error
  let errors = [];
 
