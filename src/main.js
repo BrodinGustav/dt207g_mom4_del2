@@ -5,6 +5,7 @@ const url_LogIn = `${apiUrl}/login`;
 const url_Protected = `${apiUrl}/protected`;
 
 //****HÄNDELSELYSSNARE****
+document.addEventListener("DOMContentLoaded", function() {
 
 //Händelselyssnare för register-formulär
 document.getElementById("registerForm").addEventListener("submit", async function(event) {
@@ -28,7 +29,7 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
     
     await logIn(username, password);
 });
-
+});
 //****FUNKTIONER****
 
 //Funktion för att skapa användare
@@ -99,4 +100,10 @@ async function getProtectedData() {
     } catch (error) {
         console.error("Error fetching protected data:", error);
     }
+}
+
+//Funktion för att logga ut
+function logOut() {
+    localStorage.removeItem("token");                                           //Tar bort token vid utlogg
+    document.getElementById("protectedData").style.display = "none";            //Gömmer ID vid utlogg
 }
