@@ -6,8 +6,6 @@ const url_Protected = `${apiUrl}/protected`;
 
 //****HÄNDELSELYSSNARE****
 document.addEventListener("DOMContentLoaded", function() {
-console.log("Kod körs efter DOMContent");
-
 
 const registerForm = document.getElementById("registerForm");
 const loginForm = document.getElementById("loginForm");
@@ -20,8 +18,6 @@ if (!registerForm || !loginForm) {
 
 //Händelselyssnare för register-formulär
 registerForm.addEventListener("submit", async function(event) {
-    console.log("submit-händelsen har inträffat på registerForm");
-
 
     event.preventDefault();
     
@@ -35,34 +31,12 @@ registerForm.addEventListener("submit", async function(event) {
     return;
 }
 
-// Array för error
-let errors = [];
-
-if (!username) {
-    errors.push("Användarnamn krävs");
-}
-
-if (!password) {
-    errors.push("Lösenord krävs");
-}
-
-console.log("Errors efter kontroll:", errors);
-
-
-// Om error avbryt formulär
-if (errors.length > 0) {
-    console.log(errors);            //Loggar error för att se om utskrift sker
-    displayErrors(errors);
-    return;
-}
-//Om godkänt skicka data till server
-    await createUser(username, password);
+registerForm.style.display = "none";
+await createUser(username, password);
 
     // Återställ input-fälten till tomma strängar
     document.getElementById("registerUsername").value = "";
     document.getElementById("registerPassword").value = "";
-
-    console.log("Kod efter registrering har körts");
 
 });
 
@@ -81,24 +55,9 @@ loginForm.addEventListener("submit", async function(event) {
     return;
 }
 
- // Array för error
- let errors = [];
+registerForm.style.display = "none";
+loginForm.style.display = "none";
 
-
-if (!username) {
-    errors.push("Användarnamn krävs");
-}
-
-if (!password) {
-    errors.push("Lösenord krävs");
-}
-
-// Om error avbryt formulär
-if (errors.length > 0) {
-    displayErrors(errors);
-    return;
-}
-//Om godkänt skicka data till server
     await logIn(username, password);
 
     // Återställ input-fälten till tomma strängar
@@ -108,19 +67,6 @@ if (errors.length > 0) {
 });
 
 //****FUNKTIONER****
-
-//Funktion för felmeddelanden
-function displayErrors(errors) {
-    const errorList = document.getElementById("error_list");
-    errorList.innerHTML= "";
-
-errors.forEach(error => {
-    const li = document.createElement("li");
-    li.textContent = error;
-    errorList.appendChild(li);
-});
-} 
-
 
 //Funktion för att skapa användare
 async function createUser(username, password) {             //Argument från servern skickas med vid fetch
@@ -161,8 +107,17 @@ async function logIn(username, password) {              //Argument från servern
         if (data.token) {
             localStorage.setItem("token", data.token);      //Lagra token i localStorage om lyckad inlogg
             await getProtectedData();
+        } else {
+            // Vid felaktiga användaruppgifter, visa felmeddelande
+            const errorContainer = document.getElementById("error_container");
+            const errorList = document.getElementById("error_list");
+            errorList.innerHTML = ""; // Rensa tidigare felmeddelanden
+            const li = document.createElement("li");
+            li.textContent = "Fel användarnamn eller lösenord.";
+            errorList.appendChild(li);
+            errorContainer.style.display = "block";
         }
- 
+
     } catch (error) {
         console.error("Error logging in:", error);
     }
@@ -196,4 +151,5 @@ async function getProtectedData() {
 function logOut() {
     localStorage.removeItem("token");                                           //Tar bort token vid utlogg
     document.getElementById("protectedData").style.display = "none";            //Gömmer ID vid utlogg
+    window.location.href = 'index.html';
 }

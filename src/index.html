@@ -9,30 +9,27 @@
 </head>
 <body>
     <h1>Registrering och login</h1>
-    
-    <div id="error_container">
-        <ul id="error_list"></ul>
-    </div>
-    
 
-    <h2>Registrera</h2>
+    <div id="error_container" style="display: none;">
+        <ul id="error_list"></div>
+    </div>
+
     <form id="registerForm">
-        <input type="text" id="registerUsername" placeholder="Username" required>
-        <input type="password" id="registerPassword" placeholder="Password" required>
+        <input type="text" id="registerUsername" placeholder="Username" autocomplete="username" required>
+        <input type="password" id="registerPassword" placeholder="Password" autocomplete="current-password" required>
         <button id="RegistertBtn" type="submit">Registrera</button>
     </form>
 
-    <h2>Logga in</h2>
     <form id="loginForm">
-        <input type="text" id="loginUsername" placeholder="Username" required>
-        <input type="password" id="loginPassword" placeholder="Password" required>
+        <input type="text" id="loginUsername" placeholder="Username" autocomplete="username" required>
+        <input type="password" id="loginPassword" placeholder="Password" autocomplete="current-password" required>
         <button id="LoginBtn" type="submit">Logga in</button>
     </form>
 
     <div id="protectedData" style="display: none;"> <!--Dolt ID i väntan på fetch av skyddad data-->
         <h2>Skyddad Data</h2>
         <p id="protectedContent"></p>
-        <button id="LogoutBtn" onclick="logOut()">Logg ut</button>
+        <button id="LogoutBtn" onclick="logOut()">Logga ut</button>
     </div>
     <footer>
         <p>Gustav Brodin</p
