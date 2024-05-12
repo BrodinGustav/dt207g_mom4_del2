@@ -76,3 +76,27 @@ async function logIn(username, password) {              //Argument från servern
         console.error("Error logging in:", error);
     }
 }
+
+//Funktion för att hämta skyddad data
+async function getProtectedData() {
+
+    try {
+        const token = localStorage.getItem("token");     //Hämtar token från localStorage vid fetch
+        const response = await fetch(url_Protected, {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        });
+    
+        const data = await response.json();
+        console.log(data);
+    
+        //Hämtar ID
+        document.getElementById("protectedContent").textContent = JSON.stringify(data);     //Skriver ut data från ID hämtad från servern
+        document.getElementById("protectedData").style.display = "block";                   //Visar ID vid hämtning av serverdata
+    
+    } catch (error) {
+        console.error("Error fetching protected data:", error);
+    }
+}
