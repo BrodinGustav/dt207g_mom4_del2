@@ -4,7 +4,7 @@ const url_Register = `${apiUrl}/register`;
 const url_LogIn = `${apiUrl}/login`;
 const url_Protected = `${apiUrl}/protected`;
 
-//Funktion för att registrera användare
+//Händelselyssnare för register-formulär
 document.getElementById("registerForm").addEventListener("submit", async function(event) {
 
     event.preventDefault();
@@ -26,3 +26,24 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
     
     await logIn(username, password);
 });
+
+//Funktion för att skapa användare
+async function createUser(username, password) {             //Argument från servern skickas med vid fetch
+
+    try {
+        const response = await fetch(url_Register, {        //Fetchar från URL gällande registrering
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+    
+            body: JSON.stringify({ username, password })
+        });
+
+        const data = await response.json();
+        console.log(data);                                  //Skriver ut svar från servern
+
+    } catch (error) {
+        console.error("Error registering user:", error);
+    }
+}

@@ -9,7 +9,7 @@
 75C:\Utbildning\DT207G\mom4_del2\node_modules\caniuse-lite\data\regions\HK.js133599824281846356 0
 52C:\Utbildning\DT207G\mom4_del2\node_modules\get-port133599824267506361 1
 104C:\Utbildning\DT207G\mom4_del2\node_modules\csso\node_modules\css-tree\lib\tokenizer\OffsetToLocation.js133599824279346353 0
-35C:\Utbildning\DT207G\mom4_del2\dist133599835825121683 1
+35C:\Utbildning\DT207G\mom4_del2\dist133599837575389794 1
 77C:\Utbildning\DT207G\mom4_del2\node_modules\csso\lib\replace\property\font.js133599824275776371 0
 58C:\Utbildning\DT207G\mom4_del2\node_modules\type-fest\ts41133599824273006371 1
 83C:\Utbildning\DT207G\mom4_del2\node_modules\@parcel\utils\test\PromiseQueue.test.js133599824275026361 0
@@ -39,7 +39,7 @@
 94C:\Utbildning\DT207G\mom4_del2\node_modules\@parcel\transformer-babel\src\remapAstLocations.js133599824270826400 0
 91C:\Utbildning\DT207G\mom4_del2\node_modules\posthtml\node_modules\posthtml-parser\readme.md133599824268246381 0
 83C:\Utbildning\DT207G\mom4_del2\node_modules\css-tree\cjs\syntax\node\IdSelector.cjs133599824274576403 0
-53C:\Utbildning\DT207G\mom4_del2\dist\index.de158e3a.js133599835825081732 0
+53C:\Utbildning\DT207G\mom4_del2\dist\index.de158e3a.js133599837575359990 0
 94C:\Utbildning\DT207G\mom4_del2\node_modules\@parcel\core\test\fixtures\config-plugin-not-found133599824268896391 1
 60C:\Utbildning\DT207G\mom4_del2\node_modules\tslib\tslib.d.ts133599824270026367 0
 104C:\Utbildning\DT207G\mom4_del2\node_modules\csso\node_modules\css-tree\lib\syntax\node\MediaQueryList.js133599824279226384 0
@@ -108,7 +108,7 @@
 65C:\Utbildning\DT207G\mom4_del2\node_modules\mdn-data\package.json133599824270526390 0
 64C:\Utbildning\DT207G\mom4_del2\node_modules\@swc\helpers\scripts133599824278826362 1
 66C:\Utbildning\DT207G\mom4_del2\node_modules\env-paths\package.json133599824266636358 0
-42C:\Utbildning\DT207G\mom4_del2\src\main.js133599835824852349 0
+42C:\Utbildning\DT207G\mom4_del2\src\main.js133599837575145739 0
 91C:\Utbildning\DT207G\mom4_del2\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\midl.h133599824277296353 0
 89C:\Utbildning\DT207G\mom4_del2\node_modules\caniuse-lite\data\features\offscreencanvas.js133599824283816386 0
 82C:\Utbildning\DT207G\mom4_del2\node_modules\css-tree\lib\definition-syntax\walk.js133599824280206364 0
@@ -5887,4 +5887,4 @@
 75C:\Utbildning\DT207G\mom4_del2\node_modules\.bin\update-browserslist-db.ps1133599824289206391 0
 54C:\Utbildning\DT207G\mom4_del2\dist\index.2cdaf7bc.css133599833043992178 0
 58C:\Utbildning\DT207G\mom4_del2\dist\index.2cdaf7bc.css.map133599833044022148 0
-57C:\Utbildning\DT207G\mom4_del2\dist\index.de158e3a.js.map133599835825111680 0
+57C:\Utbildning\DT207G\mom4_del2\dist\index.de158e3a.js.map133599837575379813 0
