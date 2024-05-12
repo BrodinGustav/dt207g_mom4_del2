@@ -16,7 +16,29 @@ document.getElementById("registerForm").addEventListener("submit", async functio
     const username = document.getElementById("registerUsername").value;
     const password = document.getElementById("registerPassword").value;
 
+// Array för error
+let errors = [];
+
+if (!username) {
+    errors.push("Användarnamn krävs");
+}
+
+if (!password) {
+    errors.push("Lösenord krävs");
+}
+
+// Om error avbryt formulär
+if (errors.length > 0) {
+    displayErrors(errors);
+    return;
+}
+//Om godkänt skicka data till server
     await createUser(username, password);
+
+    // Återställ input-fälten till tomma strängar
+    document.getElementById("registerUsername").value = "";
+    document.getElementById("registerPassword").value = "";
+
 });
 
 //Händelselyssnare för login-forumlär
@@ -27,10 +49,46 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
     const username = document.getElementById("loginUsername").value;
     const password = document.getElementById("loginPassword").value;
     
+ // Array för error
+ let errors = [];
+
+
+if (!username) {
+    errors.push("Användarnamn krävs");
+}
+
+if (!password) {
+    errors.push("Lösenord krävs");
+}
+
+// Om error avbryt formulär
+if (errors.length > 0) {
+    displayErrors(errors);
+    return;
+}
+//Om godkänt skicka data till server
     await logIn(username, password);
+
+    // Återställ input-fälten till tomma strängar
+    document.getElementById("loginUsername").value = "";
+    document.getElementById("loginPassword").value = "";
 });
 });
+
 //****FUNKTIONER****
+
+//Funktion för felmeddelanden
+function displayErrors(errors) {
+    const errorList = document.getElementById("error_list");
+    errorList.innerHTML= "";
+
+errors.forEach(error => {
+    const li = document.createElement("li");
+    li.textContent = error;
+    errorList.appendChild(li);
+});
+} 
+
 
 //Funktion för att skapa användare
 async function createUser(username, password) {             //Argument från servern skickas med vid fetch

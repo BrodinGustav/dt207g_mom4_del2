@@ -22,6 +22,12 @@ h1, h2{
     width:10em;
 }
 
+#error_container{
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+}
+
 #registerForm{
     border: 2px black solid;
     border-radius:20px;
