@@ -16,3 +16,13 @@ document.getElementById("registerForm").addEventListener("submit", async functio
     await createUser(username, password);
 });
 
+//Funktion för att logga in
+document.getElementById("loginForm").addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+    
+    const username = document.getElementById("loginUsername").value;
+    const password = document.getElementById("loginPassword").value;
+    
+    await logIn(username, password);
+});
