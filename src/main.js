@@ -114,9 +114,20 @@ async function logIn(username, password) {              //Argument från servern
             errorList.innerHTML = ""; // Rensa tidigare felmeddelanden
             const li = document.createElement("li");
             li.textContent = "Fel användarnamn eller lösenord.";
+            li.style.color = "white"; 
             errorList.appendChild(li);
             errorContainer.style.display = "block";
-        }
+          
+        // Knapp för att skicka användaren till startsidan
+    const backButton = document.createElement("button");
+    backButton.classList.add("back-button"); // Lägger till klass för CSS
+    backButton.textContent = "Tillbaka till startsidan";
+    backButton.addEventListener("click", () => {
+        window.location.href = "/";  
+    });
+    
+    errorContainer.appendChild(backButton);
+}
 
     } catch (error) {
         console.error("Error logging in:", error);
@@ -140,7 +151,10 @@ async function getProtectedData() {
     
         //Hämtar ID
         const protectedContent = document.getElementById("protectedContent");
-        protectedContent.innerHTML = `<p>Skyddad route</p><p>Hej du</p>`;
+        protectedContent.innerHTML = `<p>Skyddad route</p><p>Här var ett forum tänkt att finnas. Men problem uppstod vid applicering av serverkod 
+        med errorn "Error: Route.post() requires a callback function but got a [object Undefined]". Flertalet försök gjordes experimentering av kod utan framgång varpå
+        tidspressen gjorde sig påtaglig närvarande. Därav endast denna enkla text som läses ut via skyddad route.</p>
+        <p>Mvh Gustav Brodin</p>`;
         document.getElementById("protectedData").style.display = "block";                   //Visar ID vid hämtning av serverdata
     
     } catch (error) {

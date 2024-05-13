@@ -68,7 +68,9 @@ justify-content: center;
 
 #RegistertBtn,
 #LoginBtn,
-#LogoutBtn{
+#LogoutBtn,
+#Redirect,
+.back-button{
     display: flex;
     justify-content: center;
     background-color:orange;
