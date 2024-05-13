@@ -106,7 +106,9 @@ async function logIn(username, password) {              //Argument från servern
  
         if (data.token) {
             localStorage.setItem("token", data.token);      //Lagra token i localStorage om lyckad inlogg
-            await getProtectedData();
+            window.location.href = "/protected.html";       //Skicka användaren till protected.html vid godkänd inloggning
+            await getProtectedData();                       
+
         } else {
             // Vid felaktiga användaruppgifter, visa felmeddelande
             const errorContainer = document.getElementById("error_container");
