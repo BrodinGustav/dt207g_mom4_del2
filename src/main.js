@@ -106,8 +106,8 @@ async function logIn(username, password) {              //Argument från servern
  
         if (data.token) {
             localStorage.setItem("token", data.token);      //Lagra token i localStorage om lyckad inlogg
-            window.location.href = "/protected.html";       //Skicka användaren till protected.html vid godkänd inloggning
-            await getProtectedData();                       
+            window.location.href = "protected.html";       //Skicka användaren till protected.html vid godkänd inloggning
+            await getProtectedData();                     
 
         } else {
             // Vid felaktiga användaruppgifter, visa felmeddelande
@@ -117,6 +117,8 @@ async function logIn(username, password) {              //Argument från servern
             const li = document.createElement("li");
             li.textContent = "Fel användarnamn eller lösenord.";
             li.style.color = "white"; 
+            li.style.listStyle = "none"; 
+            li.style.textAlign = "center"; 
             errorList.appendChild(li);
             errorContainer.style.display = "block";
           
@@ -153,11 +155,14 @@ async function getProtectedData() {
     
         //Hämtar ID
         const protectedContent = document.getElementById("protectedContent");
+        protectedContent.classList.add("protectedContent")
+        backButton.classList.add("back-button")
         protectedContent.innerHTML = `<p>Skyddad route</p><p>Här var ett forum tänkt att finnas. Men problem uppstod vid applicering av serverkod 
         med errorn "Error: Route.post() requires a callback function but got a [object Undefined]". Flertalet försök gjordes experimentering av kod utan framgång varpå
         tidspressen gjorde sig påtaglig närvarande. Därav endast denna enkla text som läses ut via skyddad route.</p>
         <p>Mvh Gustav Brodin</p>`;
-        document.getElementById("protectedData").style.display = "block";                   //Visar ID vid hämtning av serverdata
+        const protectedData = document.getElementById("protectedData")
+        protectedData.classList.add("protectedData")
     
     } catch (error) {
         console.error("Error fetching protected data:", error);
