@@ -139,7 +139,8 @@ async function getProtectedData() {
         console.log(data);
     
         //Hämtar ID
-        document.getElementById("protectedContent").textContent = JSON.stringify(data);     //Skriver ut data från ID hämtad från servern
+        const protectedContent = document.getElementById("protectedContent");
+        protectedContent.innerHTML = `<p>Skyddad route</p><p>Hej du</p>`;
         document.getElementById("protectedData").style.display = "block";                   //Visar ID vid hämtning av serverdata
     
     } catch (error) {
