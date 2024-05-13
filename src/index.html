@@ -9,7 +9,8 @@
 </head>
 <body>
     <h1>Registrering och login</h1>
-
+    <a href="protected.html" id="protected-link">Skyddad sida</a> <!--Dold länk som möjliggör för Parcel att bygga protected.html-->
+    '
     <div id="error_container" style="display: none;">
         <ul id="error_list"></div>
     </div>
@@ -26,13 +27,6 @@
         <button id="LoginBtn" type="submit">Logga in</button>
         <button id="Redirect" onclick="logOut()">Tillbaka</button>
     </form>
-
-    <!--
-    <div id="protectedData" style="display: none;"> <!--Dolt ID i väntan på fetch av skyddad data-->
-    <!--<h2>Skyddad Data</h2>
-        <p id="protectedContent"></p>
-        <button id="LogoutBtn" onclick="logOut()">Logga ut</button>
-    </div>-->
     
     <footer>
         <p>Gustav Brodin</p

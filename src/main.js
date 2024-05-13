@@ -16,30 +16,6 @@ if (!registerForm || !loginForm) {
     return;
 }
 
-//Händelselyssnare för register-formulär
-registerForm.addEventListener("submit", async function(event) {
-
-    event.preventDefault();
-    
-    //Hämtar in input från ID:fält
-    const username = document.getElementById("registerUsername").value;
-    const password = document.getElementById("registerPassword").value;
-
- // Kontrollera inputfälten
- if (!username || !password) {
-    console.error("Användarnamn och lösenord krävs.");
-    return;
-}
-
-registerForm.style.display = "none";
-await createUser(username, password);
-
-    // Återställ input-fälten till tomma strängar
-    document.getElementById("registerUsername").value = "";
-    document.getElementById("registerPassword").value = "";
-
-});
-
 //Händelselyssnare för login-forumlär
 loginForm.addEventListener("submit", async function(event) {
 
@@ -64,6 +40,32 @@ loginForm.style.display = "none";
     document.getElementById("loginUsername").value = "";
     document.getElementById("loginPassword").value = "";
 });
+
+
+//Händelselyssnare för register-formulär
+registerForm.addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+    
+    //Hämtar in input från ID:fält
+    const username = document.getElementById("registerUsername").value;
+    const password = document.getElementById("registerPassword").value;
+
+ // Kontrollera inputfälten
+ if (!username || !password) {
+    console.error("Användarnamn och lösenord krävs.");
+    return;
+}
+
+registerForm.style.display = "none";
+await createUser(username, password);
+
+    // Återställ input-fälten till tomma strängar
+    document.getElementById("registerUsername").value = "";
+    document.getElementById("registerPassword").value = "";
+
+});
+
 });
 
 //****FUNKTIONER****
@@ -106,9 +108,8 @@ async function logIn(username, password) {              //Argument från servern
  
         if (data.token) {
             localStorage.setItem("token", data.token);      //Lagra token i localStorage om lyckad inlogg
-            window.location.href = "protected.html";       //Skicka användaren till protected.html vid godkänd inloggning
-            await getProtectedData();                     
-
+            window.location.href = "protected.html";                     
+ 
         } else {
             // Vid felaktiga användaruppgifter, visa felmeddelande
             const errorContainer = document.getElementById("error_container");
@@ -136,42 +137,4 @@ async function logIn(username, password) {              //Argument från servern
     } catch (error) {
         console.error("Error logging in:", error);
     }
-}
-
-//Funktion för att hämta skyddad data
-async function getProtectedData() {
-
-    try {
-        const token = localStorage.getItem("token");     //Hämtar token från localStorage vid fetch
-        const response = await fetch(url_Protected, {
-            method: "GET",
-            headers: {
-                "Authorization": `Bearer ${token}`
-            }
-        });
-    
-        const data = await response.json();
-        console.log(data);
-    
-        //Hämtar ID
-        const protectedContent = document.getElementById("protectedContent");
-        protectedContent.classList.add("protectedContent")
-        backButton.classList.add("back-button")
-        protectedContent.innerHTML = `<p>Skyddad route</p><p>Här var ett forum tänkt att finnas. Men problem uppstod vid applicering av serverkod 
-        med errorn "Error: Route.post() requires a callback function but got a [object Undefined]". Flertalet försök gjordes experimentering av kod utan framgång varpå
-        tidspressen gjorde sig påtaglig närvarande. Därav endast denna enkla text som läses ut via skyddad route.</p>
-        <p>Mvh Gustav Brodin</p>`;
-        const protectedData = document.getElementById("protectedData")
-        protectedData.classList.add("protectedData")
-    
-    } catch (error) {
-        console.error("Error fetching protected data:", error);
-    }
-}
-
-//Funktion för att logga ut
-function logOut() {
-    localStorage.removeItem("token");                                           //Tar bort token vid utlogg
-    document.getElementById("protectedData").style.display = "none";            //Gömmer ID vid utlogg
-    window.location.href = 'index.html';
 }
