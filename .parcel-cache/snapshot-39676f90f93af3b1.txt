@@ -45,7 +45,7 @@
 75C:\Utbildning\DT207G\mom4_del2\node_modules\caniuse-lite\data\regions\HK.js133599824281846356 0
 52C:\Utbildning\DT207G\mom4_del2\node_modules\get-port133599824267506361 1
 104C:\Utbildning\DT207G\mom4_del2\node_modules\csso\node_modules\css-tree\lib\tokenizer\OffsetToLocation.js133599824279346353 0
-35C:\Utbildning\DT207G\mom4_del2\dist133601414432296875 1
+35C:\Utbildning\DT207G\mom4_del2\dist133601417817290776 1
 77C:\Utbildning\DT207G\mom4_del2\node_modules\csso\lib\replace\property\font.js133599824275776371 0
 48C:\Utbildning\DT207G\mom4_del2\package-lock.json133599824294206367 0
 62C:\Utbildning\DT207G\mom4_del2\node_modules\lmdb\src\lmdb-js.h133599824276976358 0
@@ -82,7 +82,7 @@
 65C:\Utbildning\DT207G\mom4_del2\node_modules\mdn-data\package.json133599824270526390 0
 64C:\Utbildning\DT207G\mom4_del2\node_modules\@swc\helpers\scripts133599824278826362 1
 66C:\Utbildning\DT207G\mom4_del2\node_modules\env-paths\package.json133599824266636358 0
-42C:\Utbildning\DT207G\mom4_del2\src\main.js133601414432040669 0
+42C:\Utbildning\DT207G\mom4_del2\src\main.js133601417817042276 0
 65C:\Utbildning\DT207G\mom4_del2\node_modules\posthtml\package.json133599824267266358 0
 89C:\Utbildning\DT207G\mom4_del2\node_modules\caniuse-lite\data\features\text-decoration.js133599824285536429 0
 83C:\Utbildning\DT207G\mom4_del2\node_modules\ordered-binary\.idea\ordered-binary.iml133599824266996378 0
@@ -5676,7 +5676,7 @@
 85C:\Utbildning\DT207G\mom4_del2\node_modules\@parcel\core\test\fixtures\common-targets133599824278956392 1
 92C:\Utbildning\DT207G\mom4_del2\node_modules\@parcel\core\test\fixtures\common-targets-ignore133599824278936407 1
 87C:\Utbildning\DT207G\mom4_del2\node_modules\@parcel\core\test\fixtures\config-malformed133599824267056421 1
-53C:\Utbildning\DT207G\mom4_del2\dist\index.de158e3a.js133601414432266804 0
+53C:\Utbildning\DT207G\mom4_del2\dist\index.de158e3a.js133601417817260758 0
 94C:\Utbildning\DT207G\mom4_del2\node_modules\@parcel\core\test\fixtures\config-plugin-not-found133599824268896391 1
 94C:\Utbildning\DT207G\mom4_del2\node_modules\@parcel\core\test\fixtures\custom-format-infer-ext133599824279006378 1
 95C:\Utbildning\DT207G\mom4_del2\node_modules\@parcel\core\test\fixtures\custom-format-infer-type133599824279016368 1
@@ -5907,4 +5907,4 @@
 50C:\Utbildning\DT207G\mom4_del2\dist\protected.html133601391110759433 0
 54C:\Utbildning\DT207G\mom4_del2\dist\index.2cdaf7bc.css133601410306110765 0
 58C:\Utbildning\DT207G\mom4_del2\dist\index.2cdaf7bc.css.map133601410306140762 0
-57C:\Utbildning\DT207G\mom4_del2\dist\index.de158e3a.js.map133601414432286829 0
+57C:\Utbildning\DT207G\mom4_del2\dist\index.de158e3a.js.map133601417817290776 0

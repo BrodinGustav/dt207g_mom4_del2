@@ -55,8 +55,6 @@ registerForm.addEventListener("submit", async function(event) {
 }
 
 document.getElementById("correctMessage").style.display ="block";
-console.log("Utskrift");
-
 
 await createUser(username, password);
 
