@@ -114,24 +114,32 @@ async function logIn(username, password) {              //Argument från servern
             // Vid felaktiga användaruppgifter, visa felmeddelande
             const errorContainer = document.getElementById("error_container");
             const errorList = document.getElementById("error_list");
-            errorList.innerHTML = ""; // Rensa tidigare felmeddelanden
-            const li = document.createElement("li");
+            
+            errorList.innerHTML = "";                       // Rensa tidigare felmeddelanden
+            const li = document.createElement("li");        //Skapar li-element för error-meddelande
+            
             li.textContent = "Fel användarnamn eller lösenord.";
             li.style.color = "white"; 
             li.style.listStyle = "none"; 
             li.style.textAlign = "center"; 
-            errorList.appendChild(li);
-            errorContainer.style.display = "block";
+            
+            errorList.appendChild(li);                      //Slår ihop li-element med ul-element
+            errorContainer.style.display = "block";         //Visar felmeddelanden
+
+            const register = document.getElementById("registerForm");
+            const login = document.getElementById("loginForm");
+            register.style.display = "none";                        //Döljer formulär för registrering vid felmeddelande
+            login.style.display = "none";                           //Döljer formulär för inlogg vid felmeddelande
           
-        // Knapp för att skicka användaren till startsidan
-    const backButton = document.createElement("button");
-    backButton.classList.add("back-button"); // Lägger till klass för CSS
-    backButton.textContent = "Tillbaka till startsidan";
-    backButton.addEventListener("click", () => {
-        window.location.href = "/";  
-    });
+            // Knapp för att skicka användaren till startsidan
+            const backButton = document.createElement("button");
+            backButton.classList.add("back-button");                // Lägger till klass för CSS
+            backButton.textContent = "Tillbaka till startsidan";
+            backButton.addEventListener("click", () => {
+            window.location.href = "/";  
+        });
     
-    errorContainer.appendChild(backButton);
+    errorContainer.appendChild(backButton);                         //Lägger till knapp till error-containern
 }
 
     } catch (error) {
