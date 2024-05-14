@@ -22,9 +22,7 @@ async function getProtectedData() {
         //Hämtar ID
         const protectedContent = document.getElementById("protectedContent");
         protectedContent.classList.add("protectedContent")
-        protectedContent.innerHTML = `<p>Skyddad route</p><p>Här var ett forum tänkt att finnas. Men problem uppstod vid applicering av serverkod 
-        med errorn "Error: Route.post() requires a callback function but got a [object Undefined]". Flertalet försök gjordes experimentering av kod utan framgång varpå
-        tidspressen gjorde sig påtaglig närvarande. Därav endast denna enkla text som läses ut via skyddad route.</p>
+        protectedContent.innerHTML = `<p>Välkommen till den skyddade sidan!</p>
         <p>Mvh Gustav Brodin</p>`;
         const protectedData = document.getElementById("protectedData")
         protectedData.classList.add("protectedData")

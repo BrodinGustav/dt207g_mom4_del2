@@ -7,6 +7,7 @@ const url_Protected = `${apiUrl}/protected`;
 //****HÄNDELSELYSSNARE****
 document.addEventListener("DOMContentLoaded", function() {
 
+//Hämta ID för formulär
 const registerForm = document.getElementById("registerForm");
 const loginForm = document.getElementById("loginForm");
 
@@ -23,22 +24,18 @@ loginForm.addEventListener("submit", async function(event) {
     
     const username = document.getElementById("loginUsername").value;
     const password = document.getElementById("loginPassword").value;
-    
-
+  
  // Kontrollera inputfälten
  if (!username || !password) {
     console.error("Användarnamn och lösenord krävs.");
     return;
 }
-
-registerForm.style.display = "none";
-loginForm.style.display = "none";
-
-    await logIn(username, password);
+     await logIn(username, password);
 
     // Återställ input-fälten till tomma strängar
     document.getElementById("loginUsername").value = "";
     document.getElementById("loginPassword").value = "";
+
 });
 
 
@@ -57,7 +54,10 @@ registerForm.addEventListener("submit", async function(event) {
     return;
 }
 
-registerForm.style.display = "none";
+document.getElementById("correctMessage").style.display ="block";
+console.log("Utskrift");
+
+
 await createUser(username, password);
 
     // Återställ input-fälten till tomma strängar
@@ -137,4 +137,7 @@ async function logIn(username, password) {              //Argument från servern
     } catch (error) {
         console.error("Error logging in:", error);
     }
+
 }
+
+

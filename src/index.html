@@ -16,16 +16,16 @@
     </div>
 
     <form id="registerForm">
-        <input type="text" id="registerUsername" placeholder="Username" autocomplete="username" required>
-        <input type="password" id="registerPassword" placeholder="Password" autocomplete="current-password" required>
+        <input type="text" id="registerUsername" name="username" placeholder="Username" autocomplete="username" required>
+        <input type="password" id="registerPassword" name="password" placeholder="Password" autocomplete="current-password" required>
         <button id="RegistertBtn" type="submit">Registrera</button>
+        <p id="correctMessage">Användare registrerad! Var god logga in</p>
     </form>
 
     <form id="loginForm">
-        <input type="text" id="loginUsername" placeholder="Username" autocomplete="username" required>
-        <input type="password" id="loginPassword" placeholder="Password" autocomplete="current-password" required>
+        <input type="text" id="loginUsername" name="username" placeholder="Username" autocomplete="username" required>
+        <input type="password" id="loginPassword" name="password" placeholder="Password" autocomplete="current-password" required>
         <button id="LoginBtn" type="submit">Logga in</button>
-        <button id="Redirect" onclick="logOut()">Tillbaka</button>
     </form>
     
     <footer>

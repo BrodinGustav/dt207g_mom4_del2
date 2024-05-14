@@ -29,6 +29,13 @@ justify-content: center;
     width:10em;
 }
 
+#correctMessage{
+    display:none;
+    font-size:0.6em;
+    font-style: italic;
+    text-align: center;
+}
+
 #error_container{
     display: flex;
     justify-content: center;
