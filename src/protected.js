@@ -4,6 +4,17 @@ const url_Register = `${apiUrl}/register`;
 const url_LogIn = `${apiUrl}/login`;
 const url_Protected = `${apiUrl}/protected`;
 
+//Kontroll om token finns när sidan laddas
+document.addEventListener("DOMContentLoaded", function() {
+    const token = localStorage.getItem("token");
+    if(!token) {
+        window.location.href = "index.html";
+    } else {
+        getProtectedData();
+    }
+})
+
+
 //Funktion för att hämta skyddad data
 async function getProtectedData() {
 
@@ -15,6 +26,12 @@ async function getProtectedData() {
                 "Authorization": `Bearer ${token}`
             }
         });
+
+        //Kontroll om token är ogiltig/saknas. Om så, dirigera användaren till startsidan
+        if(response.status === 401 || response.status === 403) {
+            localStorage.removeItem("token");
+            window.location.href = "index.html";
+        }
     
         const data = await response.json();
         console.log(data);
