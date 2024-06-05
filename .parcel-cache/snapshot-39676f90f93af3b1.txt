@@ -33,7 +33,7 @@
 75C:\Utbildning\DT207G\mom4_del2\node_modules\caniuse-lite\data\regions\HK.js133599824281846356 0
 52C:\Utbildning\DT207G\mom4_del2\node_modules\get-port133599824267506361 1
 104C:\Utbildning\DT207G\mom4_del2\node_modules\csso\node_modules\css-tree\lib\tokenizer\OffsetToLocation.js133599824279346353 0
-35C:\Utbildning\DT207G\mom4_del2\dist133620556034061617 1
+35C:\Utbildning\DT207G\mom4_del2\dist133620563079202220 1
 77C:\Utbildning\DT207G\mom4_del2\node_modules\csso\lib\replace\property\font.js133599824275776371 0
 48C:\Utbildning\DT207G\mom4_del2\package-lock.json133599824294206367 0
 62C:\Utbildning\DT207G\mom4_del2\node_modules\lmdb\src\lmdb-js.h133599824276976358 0
@@ -89,7 +89,7 @@
 63C:\Utbildning\DT207G\mom4_del2\node_modules\env-paths\readme.md133599824267116427 0
 65C:\Utbildning\DT207G\mom4_del2\node_modules\utility-types\LICENSE133599824265116626 0
 83C:\Utbildning\DT207G\mom4_del2\node_modules\@parcel\utils\test\prettifyTime.test.js133599824274806369 0
-47C:\Utbildning\DT207G\mom4_del2\src\protected.js133620556027778634 0
+47C:\Utbildning\DT207G\mom4_del2\src\protected.js133620563078856056 0
 86C:\Utbildning\DT207G\mom4_del2\node_modules\caniuse-lite\data\features\font-loading.js133599824281256366 0
 116C:\Utbildning\DT207G\mom4_del2\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\node\Function.js133599824274266401 0
 80C:\Utbildning\DT207G\mom4_del2\node_modules\caniuse-lite\data\features\dialog.js133599824280346353 0
@@ -2997,7 +2997,7 @@
 96C:\Utbildning\DT207G\mom4_del2\node_modules\csso\node_modules\css-tree\cjs\lexer\match-graph.cjs133599824275506371 0
 82C:\Utbildning\DT207G\mom4_del2\node_modules\@parcel\watcher-win32-x64\package.json133599824265636662 0
 90C:\Utbildning\DT207G\mom4_del2\node_modules\csso\node_modules\css-tree\cjs\lexer\match.cjs133599824275576494 0
-61C:\Utbildning\DT207G\mom4_del2\dist\protected.083fdc3b.js.map133620556033904518 0
+61C:\Utbildning\DT207G\mom4_del2\dist\protected.083fdc3b.js.map133620563079189756 0
 99C:\Utbildning\DT207G\mom4_del2\node_modules\csso\node_modules\css-tree\cjs\lexer\prepare-tokens.cjs133599824276566396 0
 90C:\Utbildning\DT207G\mom4_del2\node_modules\caniuse-lite\data\features\devicepixelratio.js133599824280326369 0
 76C:\Utbildning\DT207G\mom4_del2\node_modules\cosmiconfig\dist\readFile.js.map133599824273176373 0
@@ -5901,10 +5901,10 @@
 57C:\Utbildning\DT207G\mom4_del2\dist\index.4d6bcbeb.js.map133601008370406076 0
 61C:\Utbildning\DT207G\mom4_del2\dist\protected.0bbfb52f.js.map133601008504019574 0
 70C:\Utbildning\DT207G\mom4_del2\dist\protected.d2593d7c.js.map.19288.5e133601391110966665 0
-57C:\Utbildning\DT207G\mom4_del2\dist\protected.083fdc3b.js133620556033531477 0
 57C:\Utbildning\DT207G\mom4_del2\dist\protected.d2593d7c.js133620556033752558 0
 57C:\Utbildning\DT207G\mom4_del2\dist\mom4_del2.59712999.js133620556033766843 0
 54C:\Utbildning\DT207G\mom4_del2\dist\index.2cdaf7bc.css133620556033800385 0
 57C:\Utbildning\DT207G\mom4_del2\dist\index.de158e3a.js.map133620556033904518 0
 50C:\Utbildning\DT207G\mom4_del2\dist\protected.html133620556033965097 0
 58C:\Utbildning\DT207G\mom4_del2\dist\index.2cdaf7bc.css.map133620556033965097 0
+57C:\Utbildning\DT207G\mom4_del2\dist\protected.083fdc3b.js133620563079156248 0

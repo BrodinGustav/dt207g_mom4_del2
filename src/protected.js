@@ -46,6 +46,8 @@ async function getProtectedData() {
     
     } catch (error) {
         console.error("Error fetching protected data:", error);
+         // Om ett fel, omdirigera till inloggningssidan
+         window.location.href = 'index.html';
     }
 }
 
